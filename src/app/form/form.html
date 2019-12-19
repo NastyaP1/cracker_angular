@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="searchForm mdb-color orange">
+      <div class="infoForm">
+      <h1>Search ways in ...</h1>
+      <form>
+        <div class="form-row">
+
+          <div class="form-group mb-2">
+            <label for="searchPlace">Найти место</label>
+            <input type="text" class="form-control" id="searchPlace" placeholder="Место" >
+          </div>
+
+         <div align>
+            <div class="form-group">
+              <label for="finance">Финансовые затраты</label>
+              <input type="range" class="form-control-range" id="finance">
+            </div>
+
+            <div class="form-group">
+              <label for="time">Временные рамки</label>
+              <input type="range" class="form-control-range" id="time">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form-row">
+          <div lass="form-group mx-sm-3 mb-2">
+            <label for="wayType">Вид отдыха</label>
+            <select class="form-control" id="wayType">
+              <option *ngFor="let way of wayTypes" [value]="way">{{way}}</option>
+            </select>
+          </div>
+
+
+          <div class="col-auto">
+            <label class="sr-only" for="author">Пользователь</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">@</div>
+              </div>
+              <input type="text" class="form-control" id="author" placeholder="Имя пользователя">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="transportType">Transport type</label>
+          <select class="form-control" id="transportType">
+            <option *ngFor="let tt of transportTypes" [value]="tt">{{tt}}</option>
+          </select>
+        </div>
+
+
+      </form>
+      <button type="submit"  align="left" class="btn btn-success" name="button">Submit</button>
+      </div>
+  </div>
+</div>
